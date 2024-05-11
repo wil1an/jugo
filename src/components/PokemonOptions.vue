@@ -1,6 +1,6 @@
 <template>
     <div class="flex flex-col items-center mt-14 sapce-y-4">
-    <li class="text-3xl" v-for="pokemon in pokemons"
+    <li @click="$emit('selectionPokemon' ,pokemon.id)" class="text-3xl" v-for="pokemon in pokemons"
     :key="pokemon.id"
     >
     {{ pokemon.name }}
